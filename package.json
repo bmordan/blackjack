@@ -1,0 +1,19 @@
+{
+  "name": "21-blackjack",
+  "version": "0.1.0",
+  "description": "The game of blackjack in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "code",
+    "challanges",
+    "guardian"
+  ],
+  "author": "bmordan",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^21.0.1"
+  }
+}
