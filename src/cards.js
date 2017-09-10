@@ -14,7 +14,14 @@ const majorCards = [
  {rank: 'king', value: 10}
 ]
 
-const minorCards = new Array(9).fill(0).map((card, i) => ({ rank: (i + 2).toString(), value: i + 2 }))
+const minorCards = new Array(9)
+  .fill(0)
+  .map((card, i) => {
+    return {
+      rank: (i + 2).toString(),
+      value: i + 2
+    }
+  })
 
 module.exports = function createCards () {
   return suits.reduce((cards, suit) => {

@@ -12,12 +12,27 @@ const suits = {
   diamonds: '♦'
 }
 
+const majorCards = [
+ {rank: 'ace', value: 11},
+ {rank: 'jack', value: 10},
+ {rank: 'queen', value: 10},
+ {rank: 'king', value: 10}
+]
+
 class Card {
-  constructor ({suit, rank, value}) {
+  constructor ({suit, rank}) {
+    if (!suit || !rank) throw new Error('Cards must have a suit and rank')
+
+    if (Object.keys(suits).indexOf(suit) < 0) throw new Error('Must be a valid suit')
+
+    const isMajor = majorCards.find(c => c.rank === rank)
+
+    if (!isMajor && rank < 2 || rank > 10) throw new Error('Must be a valid rank')
+
     this.suit = suit
     this.icon = suits[suit]
     this.rank = rank.toString()
-    this.value = value
+    this.value = isMajor ? isMajor.value : parseInt(rank)
     this.color = colors[suit]
   }
 }

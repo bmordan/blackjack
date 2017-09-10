@@ -1,4 +1,5 @@
 const createCards = require('./cards')
+const shuffle = require('lodash/shuffle')
 
 class Deck {
   constructor () {
@@ -6,12 +7,18 @@ class Deck {
     this.dealt = []
   }
 
-  _randomIndex () {
-    return Math.floor(Math.random() * this.cards.length)
+  deal (number) {
+    return new Array(number || 1)
+      .fill(0)
+      .map(card => this._getTopCard())
   }
 
-  deal () {
-    const card = this.cards.splice(this._randomIndex(), 1)
+  shuffle () {
+    this.cards = shuffle(this.cards)
+  }
+
+  _getTopCard () {
+    const card = this.cards.splice(this.cards.length - 1, 1)
     this.dealt = this.dealt.concat(card)
     return card.pop()
   }

@@ -4,7 +4,10 @@
   "description": "The game of blackjack in Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "node index.js",
+    "build": "browserify index.js -o ./dist/bundle.js",
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "code",
@@ -14,6 +17,10 @@
   "author": "bmordan",
   "license": "ISC",
   "dependencies": {
-    "jest": "^21.0.1"
+    "lodash.shuffle": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^21.0.1",
+    "browserify": "^14.4.0"
   }
 }
