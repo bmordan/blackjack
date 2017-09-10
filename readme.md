@@ -1,6 +1,6 @@
 # BlackJack
 
-# 🂧 🂷 🃗
+![yep cards](https://user-images.githubusercontent.com/4499581/30249533-2cf5d32c-9636-11e7-8871-fea9b33773c4.png)
 
 Blackjack, also known as twenty-one, is a comparing card game between usually several players and a dealer, where each player in turn competes against the dealer, but players do not play against each other. It is played with one or more decks of 52 cards, and is the most widely played casino banking game in the world.
 
